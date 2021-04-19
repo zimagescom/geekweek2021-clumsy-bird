@@ -4,7 +4,7 @@ var game = {
         steps: 0,
         start: false,
         newHiScore: false,
-        muted: false
+        muted: true
     },
 
     resources: [
@@ -48,7 +48,7 @@ var game = {
         me.state.set(me.state.GAME_OVER, new game.GameOverScreen());
 
         me.input.bindKey(me.input.KEY.SPACE, "fly", true);
-        me.input.bindKey(me.input.KEY.M, "mute", true);
+        // me.input.bindKey(me.input.KEY.M, "mute", true);
         me.input.bindPointer(me.input.KEY.SPACE);
 
         me.pool.register("clumsy", game.BirdEntity);
